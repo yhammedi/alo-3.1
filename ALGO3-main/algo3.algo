@@ -1,0 +1,58 @@
+PROCEDURE dot_product (v1:array_of_integer,V2:array_of_integer,VAR ps:INTEGER)
+VAR
+    v1x:INTEGER:=v1[1]-v1[0]
+    v1y:INTEGER:=v1[3]-v1[2]
+    v2x:INTEGER:=v2[1]-v2[0]
+    v2y:INTEGER:=v2[3]-v2[2]
+
+BEGIN
+    ps:=v1x*v2x+v1y*v2y
+    Write(ps)
+END
+ALGORITHM Dot product
+VAR
+    VEC1:array_of_integer
+    VEC2:array_of_integer
+    Result:INTEGER:=0
+
+BEGIN
+    FOR i FROM 0 TO 3 STEP 1 DO
+        Read(VEC1,VEC2,)
+    END_FOR
+    dot_product(VEC1,VEC2,Result)
+    IF (Result:=0) THEN
+       Write("vecteur1 et vecteur 2 sont orthogonaux")
+    ELSE
+      Write("vecteur1 et vecteur 2 ne sont pas orthogonaux")
+    END_IF
+END
+
+
+
+FUNCTION dot_product(v1:array_of_integer,V2:array_of_integer) :INTEGER
+VAR
+    v1x:INTEGER:=v1[1]-v1[0]
+    v1y:INTEGER:=v1[3]-v1[2]
+    v2x:INTEGER:=v2[1]-v2[0]
+    v2y:INTEGER:=v2[3]-v2[2]
+BEGIN
+    Read(dot_product)
+    RETURN Result:=0 ;
+END
+ALGORITHM Dot product
+VAR
+    VEC1:array_of_integer
+    VEC2:array_of_integer
+    Result:INTEGER:=0
+
+BEGIN
+    FOR i FROM 0 TO 3 STEP 1 DO
+        Read(VEC1,VEC2,)
+    END_FOR
+    Result:=dot_product(VEC1,VEC2)
+    IF (Result:=0) THEN
+       Write("vecteur1 et vecteur 2 sont orthogonaux")
+    ELSE
+      Write("vecteur1 et vecteur 2 ne sont pas orthogonaux")
+    END_IF
+END
